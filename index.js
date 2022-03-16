@@ -1,5 +1,7 @@
 console.log("hello world")
 
+const message = document.querySelector("#message")
+
 function addMovie(event) {
     event.preventDefault()
     const inputField = document.querySelector("input")
@@ -20,6 +22,7 @@ document.querySelector('form').addEventListener('submit', addMovie)
 
 function deleteMovie(event) {
     event.target.parentNode.remove()
+    message.textContent = "Movie Deleted!"
 }
 
 function crossOffMovie(event) {
